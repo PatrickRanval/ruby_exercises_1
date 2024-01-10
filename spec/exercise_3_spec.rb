@@ -1,10 +1,12 @@
+require_relative '../exercises/exercise_3'
+
 describe '#count_words' do
   it 'accurately counts the occurrences of each word' do
-    sentence = "hello world hello"
+    sentence = 'hello world hello'
     expected_result = { 'hello' => 2, 'world' => 1 }
     expect(count_words(sentence)).to eq(expected_result)
 
-    sentence = "repeat repeat repeat"
+    sentence = 'repeat repeat repeat'
     expected_result = { 'repeat' => 3 }
     expect(count_words(sentence)).to eq(expected_result)
   end
@@ -15,11 +17,11 @@ describe '#calculate_factorial' do
     expect(calculate_factorial(5)).to eq(120)
     expect(calculate_factorial(0)).to eq(1)
     expect(calculate_factorial(1)).to eq(1)
-    expect(calculate_factorial(10)).to eq(3628800)
+    expect(calculate_factorial(10)).to eq(3_628_800)
   end
 
   it 'returns an error for negative numbers' do
-    expect(calculate_factorial(-3)).to eq("Error: Negative number")
+    expect(calculate_factorial(-3)).to eq('Error: Negative number')
   end
 end
 
